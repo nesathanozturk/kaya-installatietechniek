@@ -1,3 +1,43 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+    "extends": [
+        "next/core-web-vitals",
+        "next/typescript",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:react-hooks/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "camelcase": "error",
+        "spaced-comment": "error",
+        "no-duplicate-imports": "warn",
+        "react-hooks/exhaustive-deps": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/no-inferrable-types": "warn",
+        "@typescript-eslint/no-unnecessary-type-constraint": "warn",
+        "no-empty": "off",
+        "no-useless-escape": "warn",
+        "prefer-const": "warn",
+        "react/prop-types": "warn",
+        "no-case-declarations": "warn",
+        "no-extra-boolean-cast": "warn",
+        "no-unsafe-optional-chaining": "warn",
+        "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "no-useless-catch": "warn",
+        "no-prototype-builtins": "warn",
+        "@typescript-eslint/no-namespace": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    }
 }

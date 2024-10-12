@@ -1,4 +1,22 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    reactStrictMode: true,
+    images: {
+        domains: ['lh3.googleusercontent.com'],
+    },
+    async headers() {
+        return [
+            {
+                source: '/(.*)',
+                headers: [
+                    {
+                        key: 'X-Frame-Options',
+                        value: 'SAMEORIGIN',
+                    },
+                ],
+            },
+        ]
+    },
+}
 
-export default nextConfig;
+export default nextConfig
