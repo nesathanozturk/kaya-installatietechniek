@@ -1,20 +1,25 @@
 'use client'
 
 import { SelectBox } from '../../components/select-box'
-import { Menu, Moon, Sun } from 'lucide-react'
+import { IconMenu2, IconMoonFilled, IconSun, IconSunFilled } from '@tabler/icons-react'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import NavList from './nav-list'
 
 export function Navbar() {
     const { theme, setTheme } = useTheme()
+    const [isClient, setIsClient] = useState<boolean>(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
 
     const handleToggleIsMobileMenuOpen = () => setIsMobileMenuOpen(prev => !prev)
 
     const handleToggleIsDarkMode = () => setTheme(theme === 'dark' ? 'light' : 'dark')
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
 
     return (
         <nav className="sticky container mx-auto flex justify-between items-center top-5 z-10 py-4 px-6 border rounded-xl bg-white/85 dark:bg-[#1C1B22] border-slate-200 backdrop-blur-xl dark:border-zinc-800">
@@ -27,19 +32,23 @@ export function Navbar() {
                 <NavList />
             </div>
             <div className="flex justfiy-between items-center gap-4">
-                <span
-                    className="cursor-pointer hover:text-orange-500 transition-colors"
-                    onClick={handleToggleIsDarkMode}
-                >
-                    {theme === 'dark' ? <Sun size={25} /> : <Moon size={25} />}
-                </span>
+                {isClient && (
+                    <span
+                        className="cursor-pointer hover:text-orange-500 transition-colors"
+                        onClick={handleToggleIsDarkMode}
+                    >
+                        {theme === 'dark' ? <IconSunFilled size={27} /> : <IconMoonFilled size={27} />}
+                    </span>
+                )}
                 <SelectBox />
-                <span
-                    className="cursor-pointer hover:text-orange-500 transition-colors xl:hidden"
-                    onClick={handleToggleIsMobileMenuOpen}
-                >
-                    <Menu size={25} />
-                </span>
+                {isClient && (
+                    <span
+                        className="cursor-pointer hover:text-orange-500 transition-colors xl:hidden"
+                        onClick={handleToggleIsMobileMenuOpen}
+                    >
+                        <IconMenu2 size={27} />
+                    </span>
+                )}
             </div>
         </nav>
     )

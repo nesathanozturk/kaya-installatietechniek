@@ -8,7 +8,11 @@ type CardProps = React.ComponentProps<typeof Card>
 
 function ServiceCard({ className, ...props }: CardProps) {
     const renderedServices = services.map(service => (
-        <Card className={cn('shadow-sm dark:bg-gradient-to-r dark:from-slate-800/40 dark:to-zinc-900', className)} {...props} key={service.id}>
+        <Card
+            className={cn('shadow-sm dark:bg-gradient-to-r dark:from-slate-800/40 dark:to-zinc-900', className)}
+            {...props}
+            key={service.id}
+        >
             <CardHeader
                 className={`bg-orange-200 text-orange-500 dark:text-orange-100 dark:bg-orange-500 w-10 h-10 md:w-12 md:h-12 flex justify-center items-center p-2 rounded-lg ml-6 mt-8 mb-4`}
             >

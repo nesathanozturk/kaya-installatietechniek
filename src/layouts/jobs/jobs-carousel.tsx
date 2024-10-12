@@ -25,7 +25,12 @@ export function JobsCarousel() {
                             <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
                                 <Card>
                                     <CardContent className="flex aspect-square items-center justify-center p-6">
-                                        <Image src={image.src} alt={image.alt} className="object-contain rounded-md h-full" loading="lazy" />
+                                        <Image
+                                            src={image.src}
+                                            alt={image.alt}
+                                            className="object-contain rounded-md h-full"
+                                            loading="lazy"
+                                        />
                                     </CardContent>
                                 </Card>
                             </CarouselItem>
@@ -36,6 +41,5 @@ export function JobsCarousel() {
                 </Carousel>
             </div>
         </section>
-
     )
 }

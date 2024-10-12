@@ -1,3 +1,4 @@
+import { IconBrandInstagram, IconHome } from '@tabler/icons-react'
 import {
     EmailIcon,
     EmailShareButton,
@@ -10,7 +11,6 @@ import {
 } from 'react-share'
 
 import CustomShareButton from '@/components/custom-share-button'
-import { IconBrandInstagram, IconHome } from '@tabler/icons-react'
 
 const handlePushAddress = (url: string) => window.open(url, '_blank')
 

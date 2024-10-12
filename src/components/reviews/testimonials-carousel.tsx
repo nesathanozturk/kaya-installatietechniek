@@ -3,6 +3,7 @@
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import Image from 'next/image'
+import { Fragment } from 'react'
 
 import { Card, CardContent } from '@/components/ui/card'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
@@ -25,13 +26,18 @@ function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) {
         <Carousel className="max-w-sm md:max-w-3xl lg:max-w-6xl mx-auto">
             <CarouselContent>
                 {filteredTestimonialsByCommentLength.map(testimonial => (
-                    <CarouselItem key={`${testimonial.reviewId}-${testimonial.comment}-review`} className="md:basis-1/2 lg:basis-1/3">
+                    <CarouselItem
+                        key={`${testimonial.reviewId}-${testimonial.comment}-${testimonial.reviewer.profilePhotoUrl}-review`}
+                        className="md:basis-1/2 lg:basis-1/3"
+                    >
                         <Card className="shadow-sm dark:bg-gradient-to-r dark:from-slate-800/40 dark:to-zinc-900">
                             <CardContent className="flex flex-col aspect-square items-center justify-center">
                                 <div className="flex flex-col py-5">
                                     <div className="flex justify-between items-center">
                                         <div className="flex gap-1">
-                                            {getRating(testimonial.starRating).map(star => star)}
+                                            {getRating(testimonial.starRating).map((star, index) => (
+                                                <Fragment key={index}>{star}</Fragment>
+                                            ))}
                                         </div>
                                         <Image src={googleLogo} alt="Google Logo" className="h-7 w-20" />
                                     </div>
