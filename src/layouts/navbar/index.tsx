@@ -1,10 +1,10 @@
 'use client'
 
-import { SelectBox } from '../../components/select-box'
-import { IconMenu2, IconMoonFilled, IconSun, IconSunFilled } from '@tabler/icons-react'
+import { IconMenu2, IconMoonFilled, IconSunFilled } from '@tabler/icons-react'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { SelectBox } from '../../components/select-box'
 
 import NavList from './nav-list'
 
@@ -27,7 +27,7 @@ export function Navbar() {
                 Kaya's Ins.
             </Link>
             <div
-                className={`bg-white xl:bg-transparent border-[1px] xl:border-0 sm:px-0 right-2 sm:right-0 z-50 sm:w-72 absolute top-[90px] min-w-fit xl:static xl:top-0 xl:right-0 rounded-xl xl:block sm:h-58 ${isMobileMenuOpen ? 'block' : 'hidden'}`}
+                className={`bg-white xl:bg-transparent border-[1px] xl:border-0 sm:px-0 right-2 sm:right-0 z-50 sm:w-72 absolute top-[90px] min-w-fit xl:static xl:top-0 xl:right-0 rounded-xl xl:block sm:h-58 dark:bg-slate-800 dark:border-slate-700 xl:dark:bg-transparent dark:xl:border-transparent ${isMobileMenuOpen ? 'block' : 'hidden'}`}
             >
                 <NavList />
             </div>

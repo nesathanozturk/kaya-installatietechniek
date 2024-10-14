@@ -9,8 +9,8 @@ function ContactInfoCard() {
             key={contactInfo.title}
         >
             {contactInfo.icon}
-            <div className="mt-4">
-                <p className="text-base md:text-lg font-bold leading-none mb-2">{contactInfo.title}</p>
+            <div className="mt-3">
+                <p className="text-base md:text-lg font-bold leading-none mb-1">{contactInfo.title}</p>
                 <p className="text-xs md:text-sm text-muted-foreground word-wrap">{contactInfo.description}</p>
             </div>
         </div>

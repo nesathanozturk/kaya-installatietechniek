@@ -18,7 +18,7 @@ export const contactInfos = [
     {
         icon: (
             <CustomShareButton
-                backgroundColor="orange"
+                platform="Locatie"
                 onClick={() => handlePushAddress(process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL as string)}
             >
                 <IconHome size={35} />
@@ -57,7 +57,7 @@ export const contactInfos = [
     {
         icon: (
             <CustomShareButton
-                backgroundColor="red"
+                platform="instagram"
                 onClick={() => handlePushAddress(process.env.NEXT_PUBLIC_INSTAGRAM_URL as string)}
             >
                 <IconBrandInstagram size={40} />

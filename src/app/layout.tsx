@@ -43,7 +43,7 @@ export default function RootLayout({
                     {children}
                     <Footer />
                     <Link
-                        className="fixed bottom-7 right-8 animate-bounce"
+                        className="fixed bottom-7 right-10 animate-bounce"
                         href={process.env.NEXT_PUBLIC_WHATSAPP_URL as string}
                         target="_blank"
                     >
