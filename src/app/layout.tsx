@@ -14,7 +14,7 @@ const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
     title: "Kaya's Installatietechniek",
     description:
-        'Professionele loodgietersdiensten voor al uw behoeften, van lekkages en verstoppingen tot cv-ketel onderhoud. Snel, betrouwbaar en betaalbaar – neem vandaag nog contact met ons op!',
+        'Professionele loodgietersdiensten voor al uw behoeften, van lekkages en verstoppingen tot cv-ketel onderhoud. Snel, betrouwbaar en betaalbaar!',
     generator: 'Next.js',
     applicationName: "Kaya's Installatietechniek",
     referrer: 'origin-when-cross-origin',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         siteName: "Kaya's Installatietechniek",
         title: "Kaya's Installatietechniek",
         description:
-            'Professionele loodgietersdiensten voor al uw behoeften, van lekkages en verstoppingen tot cv-ketel onderhoud. Snel, betrouwbaar en betaalbaar – neem vandaag nog contact met ons op!',
+            'Professionele loodgietersdiensten voor al uw behoeften, van lekkages en verstoppingen tot cv-ketel onderhoud. Snel, betrouwbaar en betaalbaar!',
     },
 }
 
@@ -38,7 +38,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${jakartaSans.className} antialiased`}>
-                <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+                <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
                     <Navbar />
                     {children}
                     <Footer />

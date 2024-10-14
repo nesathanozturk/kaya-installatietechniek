@@ -22,7 +22,7 @@ export function Navbar() {
     }, [])
 
     return (
-        <nav className="sticky container mx-auto flex justify-between items-center top-5 z-10 py-4 px-6 border rounded-xl bg-white/85 dark:bg-[#1C1B22] border-slate-200 backdrop-blur-xl dark:border-zinc-800">
+        <nav className="sticky container mx-auto flex justify-between items-center top-5 z-10 py-4 px-6 border rounded-xl bg-white/80 dark:bg-[#1C1B22]/80 border-slate-200 backdrop-blur-xl dark:border-zinc-800">
             <Link href="/" className="text-xl lg:text-2xl font-bold text-orange-500">
                 Kaya's Ins.
             </Link>
