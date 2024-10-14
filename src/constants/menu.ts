@@ -12,11 +12,11 @@ export const menuLinks = [
         href: '#diensten',
     },
     {
-        title: 'Contact opnemen',
-        href: '#contact-opnemen',
-    },
-    {
         title: 'Getuigenissen',
         href: '#getuigenissen',
+    },
+    {
+        title: 'Contact opnemen',
+        href: '#contact-opnemen',
     },
 ]

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
+import Link from 'next/link'
+import { WhatsappIcon } from 'react-share'
 
 import { ThemeProvider } from '@/components/theme-provider'
 
@@ -40,6 +42,13 @@ export default function RootLayout({
                     <Navbar />
                     {children}
                     <Footer />
+                    <Link
+                        className="fixed bottom-7 right-8 animate-bounce"
+                        href={process.env.NEXT_PUBLIC_WHATSAPP_URL as string}
+                        target="_blank"
+                    >
+                        <WhatsappIcon className="hover:opacity-80 transition-opacity" size={50} round={true} />
+                    </Link>
                 </ThemeProvider>
             </body>
         </html>
