@@ -30,7 +30,7 @@ function Hero() {
                 </div>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                <Image src={plumber} alt="Male plumber fixing pipe" className="object-cover object-center rounded" />
+                <Image src={plumber} alt="A cartoonish illustration of a plumber fixing a broken pipe, with water spilling out, using tools like a wrench. The plumber should be wearing overall" className="object-cover object-center" />
             </div>
         </section>
     )
