@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     referrer: 'origin-when-cross-origin',
     keywords: ['loodgieter', 'installateur', 'cv-ketel', 'lekkage', 'verstopping', 'onderhoud'],
     robots: 'index, follow',
+    icons: {
+        icon: '/icon.ico',
+    },
     openGraph: {
         type: 'website',
         locale: 'nl_NL',
@@ -46,6 +49,7 @@ export default function RootLayout({
                         className="fixed bottom-7 right-10 animate-bounce"
                         href={process.env.NEXT_PUBLIC_WHATSAPP_URL as string}
                         target="_blank"
+                        rel="noreferrer"
                     >
                         <WhatsappIcon className="hover:opacity-80 transition-opacity" size={50} round={true} />
                     </Link>
