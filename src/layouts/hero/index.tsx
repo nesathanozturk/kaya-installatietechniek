@@ -13,7 +13,7 @@ function Hero() {
     return (
         <section
             id="home"
-            className="container -z-10 mx-auto flex flex-col-reverse items-center gap-12 px-5 py-24 md:flex-row md:gap-0"
+            className="container z-10 mx-auto flex flex-col-reverse items-center gap-12 px-5 py-24 md:flex-row md:gap-0"
         >
             <motion.div
                 initial={{

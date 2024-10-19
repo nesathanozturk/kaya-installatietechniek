@@ -1,11 +1,11 @@
 'use client'
 
-import { SelectBox } from '../../components/select-box'
-import { IconMenu2, IconMoonFilled, IconSunFilled } from '@tabler/icons-react'
+import { IconMenu2, IconMoon, IconSun } from '@tabler/icons-react'
 import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { SelectBox } from '../../components/select-box'
 
 import MobileMenu from './components/mobile-menu'
 import NavList from './components/nav-list'
@@ -39,7 +39,7 @@ export function Navbar() {
                     },
                 }}
                 viewport={{ once: true }}
-                className="container sticky top-5 z-10 mx-auto flex items-center justify-between rounded-xl border border-slate-200 bg-white/80 px-6 py-4 backdrop-blur-xl dark:border-zinc-800 dark:bg-[#1C1B22]/80"
+                className="container sticky top-5 z-20 mx-auto flex items-center justify-between rounded-xl border border-slate-200 bg-white/80 px-6 py-4 backdrop-blur-xl dark:border-zinc-800 dark:bg-[#1C1B22]/80"
             >
                 <Link href="/" className="text-xl font-bold text-orange-500 lg:text-2xl">
                     Kaya's Ins.
@@ -53,7 +53,7 @@ export function Navbar() {
                             className="cursor-pointer transition-colors hover:text-orange-500"
                             onClick={handleToggleIsDarkMode}
                         >
-                            {theme === 'dark' ? <IconSunFilled size={27} /> : <IconMoonFilled size={27} />}
+                            {theme === 'dark' ? <IconSun size={27} /> : <IconMoon size={27} />}
                         </span>
                     )}
                     <SelectBox />
