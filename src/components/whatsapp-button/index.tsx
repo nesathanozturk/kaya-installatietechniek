@@ -18,7 +18,7 @@ function WhatsappButton() {
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="fixed bottom-7 right-10 animate-bounce"
+                        className="fixed bottom-7 right-10"
                         href={process.env.NEXT_PUBLIC_WHATSAPP_URL as string}
                         target="_blank"
                     >
