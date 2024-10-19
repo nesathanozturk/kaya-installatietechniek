@@ -1,6 +1,6 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 
-export function SelectBox() {
+export function LanguageSelector() {
     return (
         <Select defaultValue="nl">
             <SelectTrigger className="w-[70px]">

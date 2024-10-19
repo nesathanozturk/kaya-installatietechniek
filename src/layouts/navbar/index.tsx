@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { SelectBox } from '../../components/select-box'
 
+import { LanguageSelector } from './components/language-selector'
 import MobileMenu from './components/mobile-menu'
 import NavList from './components/nav-list'
 
@@ -56,7 +56,7 @@ export function Navbar() {
                             {theme === 'dark' ? <IconSun size={27} /> : <IconMoon size={27} />}
                         </span>
                     )}
-                    <SelectBox />
+                    <LanguageSelector />
                     {isClient && (
                         <span
                             className="cursor-pointer transition-colors hover:text-orange-500 xl:hidden"
