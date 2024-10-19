@@ -4,12 +4,12 @@ export const menuLinks = [
         href: '#home',
     },
     {
-        title: 'Onze Werkzaamheden',
-        href: '#onze-werkzaamheden',
-    },
-    {
         title: 'Diensten',
         href: '#diensten',
+    },
+    {
+        title: 'Onze Werkzaamheden',
+        href: '#onze-werkzaamheden',
     },
     {
         title: 'Getuigenissen',

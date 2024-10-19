@@ -15,7 +15,7 @@ export function TestimonialModal({ testimonial }: TestimonialModalProps) {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <span className="text-blue-500 ml-2 text-base hover:underline cursor-pointer">Read more</span>
+                <span className="ml-2 cursor-pointer text-base text-blue-500 hover:underline">Read more</span>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
@@ -23,7 +23,7 @@ export function TestimonialModal({ testimonial }: TestimonialModalProps) {
                 </DialogHeader>
                 <div className="flex flex-col py-5">
                     {testimonial.comment.length > 0 && (
-                        <q className="flex-1 text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                        <q className="flex-1 text-sm text-gray-600 dark:text-gray-300 sm:text-base">
                             {testimonial.comment}
                         </q>
                     )}
@@ -48,7 +48,7 @@ export function TestimonialModal({ testimonial }: TestimonialModalProps) {
                         </div>
                     </div>
                 </div>
-                <div className="w-full flex justify-between items-center">
+                <div className="flex w-full items-center justify-between">
                     <div className="flex gap-1">
                         {getRating(testimonial.starRating).map((star, index) => (
                             <span key={index} className="text-yellow-400">

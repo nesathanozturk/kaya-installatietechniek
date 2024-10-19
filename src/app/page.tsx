@@ -6,7 +6,7 @@ import Testimonials from '@/layouts/testimonials'
 
 export default function Home() {
     return (
-        <main className="min-h-screen container mx-auto flex flex-col space-y-24 relative">
+        <main className="container relative mx-auto flex min-h-screen flex-col space-y-24">
             <HeroSection />
             <Services />
             <Jobs />

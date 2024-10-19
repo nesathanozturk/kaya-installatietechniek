@@ -8,7 +8,7 @@ type NavLinkProps = {
 function NavLink({ link }: NavLinkProps) {
     return (
         <a href={link.href} rel="noreferrer">
-            <li className="hover:bg-orange-500 dark:hover:bg-orange-600 hover:text-white rounded-md py-2 px-3 cursor-pointer transition-all text-xs xl:text-sm">
+            <li className="cursor-pointer rounded-md px-3 py-2 text-sm transition-all hover:bg-orange-500 hover:text-white dark:hover:bg-orange-600">
                 {link.title}
             </li>
         </a>

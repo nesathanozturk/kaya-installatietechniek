@@ -1,6 +1,6 @@
 import SectionHeader from '@/components/section-header'
 
-import { JobsCarousel } from './jobs-carousel'
+import { JobsCarousel } from './components/jobs-carousel'
 
 function Jobs() {
     return (

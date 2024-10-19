@@ -1,6 +1,7 @@
 'use client'
 
 import Autoplay from 'embla-carousel-autoplay'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import * as React from 'react'
 
@@ -13,7 +14,22 @@ export function JobsCarousel() {
     const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }))
 
     return (
-        <section className="w-full">
+        <motion.div
+            initial={{
+                opacity: 0,
+                y: -30,
+            }}
+            whileInView={{
+                opacity: 1,
+                y: 10,
+                transition: {
+                    duration: 0.5,
+                    delay: 0.3,
+                },
+            }}
+            viewport={{ once: true }}
+            className="w-full"
+        >
             <div className="mx-auto lg:max-w-6xl">
                 <Carousel
                     plugins={[plugin.current]}
@@ -28,7 +44,7 @@ export function JobsCarousel() {
                                         <Image
                                             src={image.src}
                                             alt={image.alt}
-                                            className="object-contain rounded-md h-full"
+                                            className="h-full rounded-md object-contain"
                                             loading="lazy"
                                         />
                                     </CardContent>
@@ -40,6 +56,6 @@ export function JobsCarousel() {
                     <CarouselNext />
                 </Carousel>
             </div>
-        </section>
+        </motion.div>
     )
 }

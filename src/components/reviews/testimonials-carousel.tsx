@@ -23,7 +23,7 @@ function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) {
     const filteredTestimonialsByCommentLength = testimonials.filter(testimonial => testimonial.comment.length > 0)
 
     return (
-        <Carousel className="max-w-sm md:max-w-3xl lg:max-w-6xl mx-auto">
+        <Carousel className="mx-auto max-w-sm md:max-w-3xl lg:max-w-6xl">
             <CarouselContent>
                 {filteredTestimonialsByCommentLength.map(testimonial => (
                     <CarouselItem
@@ -31,9 +31,9 @@ function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) {
                         className="md:basis-1/2 lg:basis-1/3"
                     >
                         <Card className="shadow-sm dark:bg-gradient-to-r dark:from-slate-800/40 dark:to-zinc-900">
-                            <CardContent className="flex flex-col aspect-square items-center justify-center">
+                            <CardContent className="flex aspect-square flex-col items-center justify-center">
                                 <div className="flex flex-col py-5">
-                                    <div className="flex justify-between items-center">
+                                    <div className="flex items-center justify-between">
                                         <div className="flex gap-1">
                                             {getRating(testimonial.starRating).map((star, index) => (
                                                 <Fragment key={index}>{star}</Fragment>
@@ -42,7 +42,7 @@ function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) {
                                         <Image src={googleLogo} alt="Google Logo" className="h-7 w-20" />
                                     </div>
                                     {testimonial.comment.length > 0 && (
-                                        <div className="flex-1 text-gray-600 dark:text-gray-300 my-8">
+                                        <div className="my-8 flex-1 text-gray-600 dark:text-gray-300">
                                             {`"${testimonial.comment.slice(0, 200)}${testimonial.comment.length > 200 ? '...' : ''}"`}
                                             {testimonial.comment.length > 200 && (
                                                 <TestimonialModal testimonial={testimonial} />

@@ -1,6 +1,6 @@
 import SectionHeader from '@/components/section-header'
 
-import ContactInfoCard from './contact-info-card'
+import ContactInfoCard from './components/contact-info-card'
 
 function ContactUs() {
     return (

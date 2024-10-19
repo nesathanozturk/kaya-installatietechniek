@@ -6,8 +6,8 @@
     "bracketSameLine": false,
     "arrowParens": "avoid",
     "printWidth": 120,
-    "plugins": ["prettier-plugin-tailwindcss", "@trivago/prettier-plugin-sort-imports"],
-    "importOrder": ["<THIRD_PARTY_MODULES>", "^@/lib/(.*)$", "^@/components/(.*)$", "^@/app/(.*)$", "^./(.*)$"],
+    "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+    "importOrder": ["<THIRD_PARTY_MODULES>", "^@/components/(.*)$", "^@/lib/(.*)$", "^@/app/(.*)$", "^./(.*)$"],
     "importOrderSeparation": true,
     "importOrderSortSpecifiers": true
 }

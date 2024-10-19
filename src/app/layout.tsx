@@ -49,9 +49,8 @@ export default function RootLayout({
                         className="fixed bottom-7 right-10 animate-bounce"
                         href={process.env.NEXT_PUBLIC_WHATSAPP_URL as string}
                         target="_blank"
-                        rel="noreferrer"
                     >
-                        <WhatsappIcon className="hover:opacity-80 transition-opacity" size={50} round={true} />
+                        <WhatsappIcon className="transition-opacity hover:opacity-80" size={50} round={true} />
                     </Link>
                 </ThemeProvider>
             </body>
