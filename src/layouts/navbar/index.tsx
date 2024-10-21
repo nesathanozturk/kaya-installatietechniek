@@ -24,7 +24,7 @@ export function Navbar() {
     }, [])
 
     return (
-        <nav>
+        <nav className='mx-6 sm:mx-0'>
             <motion.div
                 initial={{
                     opacity: 0,
